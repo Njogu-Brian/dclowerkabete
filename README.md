@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 dclowerkabete
+=======
+>>>>>>> 816ff35e6df88466cd5971645af14c1a1a7281e8
 # Coming Soon Website
 
 A beautiful one-page "coming soon" website with a background image slideshow, contact section with social media links, and Google Maps integration.
@@ -213,4 +216,8 @@ project/
 
 ## License
 
+<<<<<<< HEAD
 Feel free to use this template for your projects!
+=======
+Feel free to use this template for your projects!
+>>>>>>> 816ff35e6df88466cd5971645af14c1a1a7281e8
