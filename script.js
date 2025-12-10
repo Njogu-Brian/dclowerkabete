@@ -63,9 +63,39 @@ function initMap() {
 // Fallback if Google Maps API fails to load
 window.addEventListener('load', () => {
     if (typeof google === 'undefined' || typeof google.maps === 'undefined') {
-        document.getElementById('map').innerHTML = 
-            '<div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666; padding: 20px; text-align: center;">' +
-            '<p>Please add your Google Maps API key to display the map.<br>See README.md for instructions.</p>' +
-            '</div>';
+        // safely target the map-embed container if present
+        const mapEmbed = document.querySelector('.map-embed');
+        if (mapEmbed) {
+            mapEmbed.innerHTML =
+                '<div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666; padding: 20px; text-align: center;">' +
+                '<p>Please add your Google Maps API key to display the map.<br>See README.md for instructions.</p>' +
+                '</div>';
+        }
+    }
+});
+
+// Mobile nav: smooth scrolling and simple interactions
+document.addEventListener('DOMContentLoaded', () => {
+    const navItems = document.querySelectorAll('.mobile-nav-item');
+    navItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            const href = item.getAttribute('href');
+            if (!href || href.startsWith('mailto:')) return; // allow default for mailto
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                const rect = target.getBoundingClientRect();
+                const top = window.scrollY + rect.top - 24; // small offset
+                window.scrollTo({ top, behavior: 'smooth' });
+            }
+        });
+    });
+    // trigger hero animations (logo + welcome lines)
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        // force reflow then add class (CSS uses animation-delay so this simply lets them play)
+        setTimeout(() => {
+            hero.classList.add('animated');
+        }, 150);
     }
 });

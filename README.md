@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-dclowerkabete
-=======
->>>>>>> 816ff35e6df88466cd5971645af14c1a1a7281e8
 # Coming Soon Website
 
 A beautiful one-page "coming soon" website with a background image slideshow, contact section with social media links, and Google Maps integration.
@@ -215,9 +211,16 @@ project/
 - Verify `script.js` is properly linked in `index.html`
 
 ## License
+Feel free to use this template for your projects!
 
-<<<<<<< HEAD
-Feel free to use this template for your projects!
-=======
-Feel free to use this template for your projects!
->>>>>>> 816ff35e6df88466cd5971645af14c1a1a7281e8
+## Notes & Quick Checks
+
+- **YouTube link behavior**: The YouTube link in the site uses your channel URL with `?sub_confirmation=1`. That opens the channel page and prompts the user to subscribe. If you prefer a direct live-stream link or an embedded live player, provide the live video URL/ID and I can embed it directly.
+- **SVG icons**: The current YouTube and TikTok icons are simple SVGs that scale using `currentColor`, so the CSS color rules apply automatically.
+- **Preview**: You can preview the site by opening `index.html` in a browser or running a local server; the social icons should appear in the colors defined in `styles.css`.
+- **Optional quick features I can add**:
+   - Show a “Watch Live” banner near the top of the page when a live stream is active.
+   - Embed the YouTube live player directly (requires the live video ID).
+   - Swap `logo1.png` to `logo.png` across the project (I can rename references and the file if you confirm).
+
+If you'd like any of those quick options enabled now, tell me which one and I'll apply it.
